@@ -2,24 +2,24 @@
 class Ganalytics < Formula
   desc "Prometheus Google Analytics Exporter"
   homepage "https://github.com/xplorfin/googleanalytics_exporter"
-  version "0.1.0-goreleaser0001"
+  version "0.1.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/xplorfin/googleanalytics_exporter/releases/download/0.1.0-goreleaser0001/ganalytics_Darwin_x86_64.tar.gz"
-    sha256 "4511c664c4f4f8619eca01a8b7ec7b8a3a918a29004acbd6f1f145663118aeef"
+    url "https://github.com/xplorfin/googleanalytics_exporter/releases/download/0.1.0/ganalytics_Darwin_x86_64.tar.gz"
+    sha256 "19efba66450869dd65fd369e9d7e358cc6a593884511ab4e845a89d0774ebe3f"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/xplorfin/googleanalytics_exporter/releases/download/0.1.0-goreleaser0001/ganalytics_Linux_x86_64.tar.gz"
-      sha256 "14033a258ac0ca220713bb953e39e2789c302d5658a4945e4982cb96449f7c96"
+      url "https://github.com/xplorfin/googleanalytics_exporter/releases/download/0.1.0/ganalytics_Linux_x86_64.tar.gz"
+      sha256 "e569b42858b58248abf37618bd5524d699341812b27e53aac112264ed99f3aca"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/xplorfin/googleanalytics_exporter/releases/download/0.1.0-goreleaser0001/ganalytics_Linux_arm64.tar.gz"
-        sha256 "e8ff9aa0e0b9a0007e348a30c0f35261a8df190bdf3e7df128dc797feb3d2ed4"
+        url "https://github.com/xplorfin/googleanalytics_exporter/releases/download/0.1.0/ganalytics_Linux_arm64.tar.gz"
+        sha256 "56aaef1f8d5f18f4a1f8a6c603b62d6a5ec7841151d0247a4ec44aaf1db5adf7"
       else
-        url "https://github.com/xplorfin/googleanalytics_exporter/releases/download/0.1.0-goreleaser0001/ganalytics_Linux_armv6.tar.gz"
-        sha256 "b849fc64ca9f22bba42deebc16988932c923235c4894252b266872bd5ec38a3c"
+        url "https://github.com/xplorfin/googleanalytics_exporter/releases/download/0.1.0/ganalytics_Linux_armv6.tar.gz"
+        sha256 "a35ae803ba65c625b77ca474f437b5d6d4f0d1b7adc2cbf034e135d4d3c4b7a9"
       end
     end
   end
